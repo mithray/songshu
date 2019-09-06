@@ -1,0 +1,22 @@
+path_prefix: "lib"
+api:
+
+    # -------------- #
+    # Initialization #
+    # -------------- #
+    
+    all:
+      name: all
+      description: Check if git repository exists
+      func_name: all
+      params_user:
+      params_internal: 
+      - name: command
+        type: string
+        default:  
+      tests:
+      - parameters: 
+          command: 
+        condition: 
+        #        all.js  clear.js  decrypt.js  delete.js  encrypt.js  getEncryptedPropertyKey.js  getHash.js  get.js  getSet.js  has.js  padString.js  path.js  promptForInfo.js  promptPassword.js  questions.js  set.js  size.js
+

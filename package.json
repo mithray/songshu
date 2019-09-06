@@ -1,0 +1,21 @@
+{
+    "name": "songshu",
+    "version": "0.0.1",
+    "description": "",
+    "main": "index.js",
+    "bin": "./bin/songshu.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "mithrayls <mithray@protonmail.com> (https://mithrayls.github.io/)",
+    "license": "MIT",
+    "dependencies": {
+        "@mithray/bdd-cligen": "0.0.1",
+        "ansi-colors": "^4.1.1",
+        "argon2": "^0.24.1",
+        "configstore": "^5.0.0",
+        "inquirer": "^7.0.0",
+        "tweetnacl": "^1.0.1"
+    }
+}
