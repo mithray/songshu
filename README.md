@@ -4,10 +4,6 @@ _A usable node module for secure credential storage_
 
 ![Songshu](https://raw.githubusercontent.com/mithrayls/songshu/master/squirrel.png)
 
-![Songshu](https://raw.githubusercontent.com/mithrayls/songshu/master/squirrel.png?sanitize=true)
-
-[[https://github.com/mithrayls/songshu/blog/master/squirrel.png|alt=songshu)]]
-
 ## Introduction
 
 This is basically an encrypted wrapper around the npm packages `inquirer` and `configstore` and put into one useful package. `songshu` provides the following features.
