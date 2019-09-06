@@ -11,7 +11,7 @@ This is basically an encrypted wrapper around the npm packages `inquirer` and `c
 -   Security hardened. `songshu` encrypts everything in the configuration storage by default, prompting a user for password to use to seed the encryption key.
 -   Convenient. `songshu` automatically stores answers received by `inquirer` into encrypted `configstore`.
 -   Extra Convenient. If you provide an array of questions to `songshu` you can choose to have them only prompt the user if the answer is not already saved in storage.
--   Compatible with the extremely popular `configstore`. `songshu` is a friendly squirrel that plays well with others. `songshu` has been trained to mimic the behavior of config store in most cases. Not thoroughly tested, but the API exposes the same functions. If you switch to `songshu` you will need to reenter your config information.
+-   Compatible with the extremely popular `configstore`. `songshu` is a friendly squirrel🐿️ that plays well with others. `songshu` has been trained to mimic the behavior of config store in most cases. Not thoroughly tested, but the API exposes the same functions. If you switch to `songshu` you will need to reenter your config information.
 
 ---
 
