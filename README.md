@@ -3,6 +3,7 @@
 _A usable node module for secure credential storage_
 
 ![Songshu](https://raw.githubusercontent.com/mithrayls/songshu/master/squirrel.png?sanitize=true)
+[[https://github.com/mithrayls/songshu/blog/master/squirrel.png|alt=songshu)]]
 
 ## Introduction
 
@@ -46,4 +47,5 @@ songshu = new Songshu(packageJson.name)
 ## Roadmap
 
 Fill in later.
+
 # songshu
