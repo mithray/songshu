@@ -25,7 +25,7 @@ This is basically an encrypted wrapper around the npm packages `inquirer` and `c
 
 ## Installation
 
-```shell
+```bash
 yarn install songshu
 
 # or
@@ -37,7 +37,7 @@ npm install songshu
 
 The API is identical to the npm package `configstore`, so you can copy their examples except with some exceptions.
 
-```
+```javascript
 const Songshu = require('songshu')
 const packageJson = require('./package.json')
 songshu = new Songshu(packageJson.name)
