@@ -130,7 +130,7 @@ Upon receiving a key and a value to store, `songshu` does the following:
 
     | option         | algorithm_name                                                                                                                                           |
     | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | alg_stretching | <ul style="display: inline;"><li>argon2id</li><li>pbkdf2</li><li>scrypt</li><li>argon2i</li><li>argon2d</li><li>bcrypt</li></ul>                         |
+    | alg_stretching | <ul style="display: inline; color: red;"><li>argon2id</li><li>pbkdf2</li><li>scrypt</li><li>argon2i</li><li>argon2d</li><li>bcrypt</li></ul>             |
     | alg_encryption | <ul><li>aes-256-xts</li><li>nacl</li><li>OpenPGP</li><li>all node crypto algos</li></ul>                                                                 |
     | alg_padding    | <ul><li>nacl</li><li>node</li><li>zero</li><li>bit</li><li>tbc</li><li>pkcs5</li><li>pkcs7</li> <li>iso7816</li> <li>iso10126</li><li>ansix923</li></ul> |
 
