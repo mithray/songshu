@@ -122,17 +122,17 @@ Upon receiving a key and a value to store, `songshu` does the following:
     ```javascript
     encryption: {
         enabled: true,
-        alg_encryption: [ 'aes-256-xts', 'nacl', 'OpenPGP', 'all node crypto algos']
-        alg_stretching: ['argon2id, pbkdf2, scrypt, argon2i, argon2d, bcrypt]
-        alg_padding: [ 'nacl.randomBytes', 'crypto.randomBytes', 'zero', 'bit', 'TBC', 'PKCS#5', 'PKCS#7', 'ISO7816-4', 'ISO10126-2', 'ANSIx9.23']
+        alg_encryption: 'aes-256-xts',
+        alg_stretching: 'argon2id',
+        alg_padding: 'nacl'
     },
     ```
 
-| option         | algorithm_name                                                                                                                                            |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| alg_stretching | <ul><li>argon2id</li><li>pbkdf2</li><li>scrypt</li><li>argon2i</li><li>argon2d</li><li>bcrypt</li></ul>                                                   |
-| alg_encryption | <ul><li>aes-256-xts</li><li>nacl</li><li>OpenPGP</li> <li>all node crypto algos</li></ul>                                                                 |
-| alg_padding    | <ul><li>nacl</li><li>node</li><li>zero</li><li>bit</li><li>TBC</li><li>pkcs5</li><li>pkcs#7</li> <li>iso7816</li> <li>iso10126</li><li>ansix923</li></ul> |
+    | option         | algorithm_name                                                                                                                                           |
+    | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | alg_stretching | <ul><li>argon2id</li><li>pbkdf2</li><li>scrypt</li><li>argon2i</li><li>argon2d</li><li>bcrypt</li></ul>                                                  |
+    | alg_encryption | <ul><li>aes-256-xts</li><li>nacl</li><li>OpenPGP</li> <li>all node crypto algos</li></ul>                                                                |
+    | alg_padding    | <ul><li>nacl</li><li>node</li><li>zero</li><li>bit</li><li>TBC</li><li>pkcs5</li><li>pkcs7</li> <li>iso7816</li> <li>iso10126</li><li>ansix923</li></ul> |
 
 -   [ ] Three interfaces:
     -   [ ] Node Module
