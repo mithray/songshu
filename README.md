@@ -4,7 +4,7 @@ _A usable node module for secure credential storage_
 
 ![Songshu](https://raw.githubusercontent.com/mithrayls/songshu/master/squirrel_small.png)
 
-## Introduction 🔰
+## <a name="introduction"></a>Introduction 🔰
 
 `songshu` is a friendly squirrel🐿️ that can act almost as a drop in replacement for `configstore`(it has minor API differences) but provides extra methods and stores data as encrypted by default. For the most part, it is an encrypted wrapper around the npm packages `configstore` but for helpful prompting functionality from `inquirer`. `songshu` provides the following features:
 
@@ -16,17 +16,17 @@ _A usable node module for secure credential storage_
 
 ---
 
-## Contents 📖
+## <a name="contents"></a>Contents 📖
 
--   [Introduction](#introduction-)
--   [Contents](#contents-)
--   [Installation](#installation-%EF%B8%8F)
--   [Usage](#usage-%EF%B8%8F)
+-   [Introduction](#introduction)
+-   [Contents](#contents)
+-   [Installation](#installation)
+-   [Usage](#usage)
 -   [Issues and `configstore` Differences](#issues-and-configstore-differencs)
--   [Cryptography](#cryptography-)
+-   [Cryptography](#cryptography)
 -   [Roadmap](#roadmap)
 
-## Installation 🏗️
+## <a name="installation"></a>Installation 🏗️
 
 ```sh
 yarn add songshu
@@ -36,7 +36,7 @@ yarn add songshu
 npm install songshu
 ```
 
-## Usage ⌨️
+## <a name="usage"></a>Usage ⌨️
 
 The API is identical to the npm package `configstore`, so you can copy their [examples](https://github.com/yeoman/configstore) except with [some exceptions](#issues-and-configstore-differences).
 
@@ -93,7 +93,7 @@ This section only describes the surface API differences between the two, it does
     -   **`getSet`**: Checks every key in the array to see if it exists in storage, if it doesn't, it will prompt the user to set its value.
     -   **`setPrompt`**: For every key in the array, it will prompt the user to set its value.
 
-## Cryptography 🔒
+## <a name="cryptography"></a>Cryptography 🔒
 
 To derive an encryption key, `songshu` does the following:
 
@@ -113,25 +113,23 @@ Upon receiving a key and a value to store, `songshu` does the following:
 
 ## <a name="roadmap"></a> Roadmap 🛣️
 
--   [ ] Encryption options
+-   [ ] Support more encryption options, especially the ones supported by Nacl, Node Crypto(uses OpenSSL), OpenPGP
 
-```javascript
-encryption: {
-    enabled: true,
-    alg_encryption: [ 'aes-256-xts', 'nacl', 'OpenPGP', 'all node crypto algos']
-    alg_stretching: ['argon2id, pbkdf2, scrypt, argon2i, argon2d, bcrypt]
-    alg_padding: [ 'nacl.randomBytes', 'crypto.randomBytes', 'zero', 'bit', 'TBC', 'PKCS#5', 'PKCS#7', 'ISO7816-4', 'ISO10126-2', 'ANSIx9.23']
-},
-```
+    -   [Node Crypto algorithms](https://nodejs.org/api/crypto.html#crypto_crypto_createcipheriv_algorithm_key_iv_options)
+    -   [tweetnacl-js](https://github.com/dchest/tweetnacl-js)
+    -   [summary of padding types](http://www.crypto-it.net/eng/theory/padding.html)
 
--   [ ] Create three interfaces
+    ```javascript
+    encryption: {
+        enabled: true,
+        alg_encryption: [ 'aes-256-xts', 'nacl', 'OpenPGP', 'all node crypto algos']
+        alg_stretching: ['argon2id, pbkdf2, scrypt, argon2i, argon2d, bcrypt]
+        alg_padding: [ 'nacl.randomBytes', 'crypto.randomBytes', 'zero', 'bit', 'TBC', 'PKCS#5', 'PKCS#7', 'ISO7816-4', 'ISO10126-2', 'ANSIx9.23']
+    },
+    ```
+
+-   [ ] Three interfaces:
     -   [ ] Node Module
     -   [ ] Non Interactive CLI with `commander`
     -   [ ] Interactive CLI with `inquirer`
--   [ ] Customize logging
-
-###
-
-[Node Crypto algorithms](https://nodejs.org/api/crypto.html#crypto_crypto_createcipheriv_algorithm_key_iv_options)
-[tweetnacl-js](https://github.com/dchest/tweetnacl-js)
-[summary of padding types](http://www.crypto-it.net/eng/theory/padding.html)
+-   [ ] Customize logging options
