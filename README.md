@@ -79,11 +79,11 @@ This section only describes the surface API differences between the two, it does
 ###
 
 -   Extra functions
-    -   **`getSet`**. `songshu`s `getSet` function is similar to `configstore`s `set` function, except
+    -   **`getSet`**: `songshu`'s `getSet` function is similar to `configstore`'s `set` function, except
         -   It only accepts a key, it does not accept a value.
         -   If the key already exists in storage, it will not redefine it.
         -   If the key does not exist in storage, it will prompt the user to enter it with inquirer.
-    -   **`get`**. and `getSet` accept arrays.
+    -   **`get`**: and `getSet` accept arrays.
 
 ## Cryptography 🔒
 
