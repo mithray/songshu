@@ -79,15 +79,16 @@ This section only describes the surface API differences between the two, it does
 ###
 
 -   Extra functions
+
     -   **`getSet`**: `songshu`'s `getSet` function is similar to `configstore`'s `set` function, except
         -   `getSet` only accepts a key, it does not accept a value.
         -   If the key already exists in storage, `getSet` will not redefine it.
         -   If the key does not exist in storage, `getSet` will prompt the user to enter it with inquirer.
     -   **`setPrompt`**: There is a use case missing from getSet, namely that a developer may wish to prompt the user to replace the value given to a key, even if that key already exists in storage. `songshu`s `setPrompt` method doesn't care if a key/value pair exists in the storage or not. It will be overwritten if it exists, it will be created if it does not exist.
 
-```javascript
-songshu.set('some_key', {})
-```
+    ```javascript
+    songshu.set('some_key', {})
+    ```
 
     -   **`get`**: and `getSet` accept arrays.
 
