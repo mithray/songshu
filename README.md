@@ -76,21 +76,19 @@ This section only describes the surface API differences between the two, it does
     -   **API Consumers:** It seems more consistent if they are _methods_, as they are used like methods.
     -   **API Developers:** Because `songshu` requires a password to encrypt and decrypt, and because it aims to be modular in making its methods usable independently of the `songshu` object, it is much easier to implement _functions_ as object properties which can be run anytime, rather than properties, which are normally defined when the object is created.
 
-###
+### Extra functions
 
--   Extra functions
-
-    -   **`getSet`**: `songshu`'s `getSet` function is similar to `configstore`'s `set` function, except
-        -   `getSet` only accepts a key, it does not accept a value.
-        -   If the key already exists in storage, `getSet` will not redefine it.
-        -   If the key does not exist in storage, `getSet` will prompt the user to enter it with inquirer.
-    -   **`setPrompt`**: There is a use case missing from getSet, namely that a developer may wish to prompt the user to replace the value given to a key, even if that key already exists in storage. `songshu`s `setPrompt` method doesn't care if a key/value pair exists in the storage or not. It will be overwritten if it exists, it will be created if it does not exist.
+-   **`getSet`**: `songshu`'s `getSet` function is similar to `configstore`'s `set` function, except
+    -   `getSet` only accepts a key, it does not accept a value.
+    -   If the key already exists in storage, `getSet` will not redefine it.
+    -   If the key does not exist in storage, `getSet` will prompt the user to enter it with inquirer.
+-   **`setPrompt`**: There is a use case missing from getSet, namely that a developer may wish to prompt the user to replace the value given to a key, even if that key already exists in storage. `songshu`s `setPrompt` method doesn't care if a key/value pair exists in the storage or not. It will be overwritten if it exists, it will be created if it does not exist.
 
     ```javascript
     songshu.set('some_key', {})
     ```
 
-    -   **`get`**: and `getSet` accept arrays.
+-   **`get`**: and `getSet` accept arrays.
 
 ## Cryptography 🔒
 
