@@ -29,7 +29,7 @@ _A usable node module for secure credential storage_
 ## Installation 🏗️
 
 ```sh
-yarn install songshu
+yarn add songshu
 
 # or
 
