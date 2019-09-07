@@ -88,7 +88,10 @@ This section only describes the surface API differences between the two, it does
     songshu.set('some_key', {})
     ```
 
--   **`get`**: and `getSet` accept arrays.
+-   The following `songshu` methods accept arrays as parameters:
+    -   **`get`**: Returns an array of values corresponding to the array of keys.
+    -   **`getSet`**: Checks every key in the array to see if it exists in storage, if it doesn't, it will prompt the user to set its value.
+    -   **`setPrompt`**: For every key in the array, it will prompt the user to set its value.
 
 ## Cryptography 🔒
 
@@ -96,7 +99,7 @@ To derive an encryption key, `songshu` does the following:
 
 1. Prompts for a password from the user
 2. Asks for confirmation with a retype
-3. Stretches the password with argon2id to get an output key.
+3. Stretches the password with argon2id to get an output key
 4. Hashes the argon2id key with sha256 (to get the right key length for aes)
 5. Uses the argon2id hash as the input entropy creates an AES cipher
 
