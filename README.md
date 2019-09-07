@@ -117,7 +117,7 @@ Upon receiving a key and a value to store, `songshu` does the following:
 
     -   [Node Crypto algorithms](https://nodejs.org/api/crypto.html#crypto_crypto_createcipheriv_algorithm_key_iv_options)
     -   [tweetnacl-js](https://github.com/dchest/tweetnacl-js)
-    -   [summary of padding types](http://www.crypto-it.net/eng/theory/padding.html)
+    -   [Summary of padding types](http://www.crypto-it.net/eng/theory/padding.html)
 
     ```javascript
     encryption: {
@@ -127,6 +127,20 @@ Upon receiving a key and a value to store, `songshu` does the following:
         alg_padding: [ 'nacl.randomBytes', 'crypto.randomBytes', 'zero', 'bit', 'TBC', 'PKCS#5', 'PKCS#7', 'ISO7816-4', 'ISO10126-2', 'ANSIx9.23']
     },
     ```
+
+|---|---|
+| alg_encryption | 'aes-256-xts', 'nacl', 'OpenPGP', 'all node crypto algos'|
+| alg_stretching | 'argon2id, pbkdf2, scrypt, argon2i, argon2d, bcrypt|
+| alg_padding | nacl.randomBytes|
+| |crypto.randomBytes|
+| |zero|
+| |bit|
+| |TBC|
+| |PKCS#5|
+| |PKCS#7|
+| |ISO7816-4|
+| |ISO10126-2|
+| |ANSIx9.23|
 
 -   [ ] Three interfaces:
     -   [ ] Node Module
