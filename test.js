@@ -12,6 +12,7 @@ obj = {
     e: 4
 }
 
+console.log(process.env)
 async function populateData(obj) {
     for (let key in obj) {
         res = await songshu.set(key, obj[key])
@@ -19,7 +20,7 @@ async function populateData(obj) {
     return res
 }
 async function add() {
-    let abc = await songshu.getSet('def')
+    let abc = await songshu.getSet('defaeu')
     return abc
 }
 
