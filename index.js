@@ -13,7 +13,7 @@ function songshu(name) {
     this.getEncryptedPropertyKey = require('./lib/getEncryptedPropertyKey.js')
     /*
     this.reKey = require('./lib/reKey.js')
-    this.start = require('./lib/start.js') //interactive menu based secret manager
+    this.start = require('./lib/start.js') //interactive menu based secret manager using npms `inquirer`
     */
 }
 
