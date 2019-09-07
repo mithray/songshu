@@ -18,13 +18,13 @@ _A usable node module for secure credential storage_
 
 ## Contents 📖
 
--   [Introduction](#introduction)
--   [Contents](#contents)
--   [Installation](#installation)
--   [Usage](#usage)
+-   [Introduction](#introduction-)
+-   [Contents](#contents-)
+-   [Installation](#installation-%EF%B8%8F)
+-   [Usage](#usage-%EF%B8%8F)
 -   [Issues and `configstore` Differences](#issues-and-configstore-differencs)
--   [Cryptography](#cryptography)
--   [Roadmap](#roadmap)
+-   [Cryptography](#cryptography-)
+-   [Roadmap](#roadmap-%EF%B8%8F)
 
 ## Installation 🏗️
 
@@ -67,7 +67,7 @@ You can even set the mask to any arbitrary character!? Why not choose something 
 
 ## Issues and `configstore` Differences
 
-This section only describes the surface API differences between the two, it does not include encryption which is defined in the section [cryptography](#cryptography).
+This section only describes the surface API differences between the two, it does not include encryption which is defined in the section [cryptography](#cryptography-).
 
 ### Issues
 
