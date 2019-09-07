@@ -6,13 +6,13 @@ _A usable node module for secure credential storage_
 
 ## Introduction 🔰
 
-`songshu` is a friendly squirrel🐿️ that can work as a drop in replacement for configstore but also provides extra options to make it more convenient to use such as providing
-This is basically an encrypted wrapper around the npm packages `inquirer` and `configstore` and put into one useful package. `songshu` provides the following features.
+`songshu` is a friendly squirrel🐿️ that can act almost as a drop in replacement for `configstore`(it has minor API differences) but provides extra methods and stores data as encrypted by default. For the most part, it is an encrypted wrapper around the npm packages `configstore` but for helpful prompting functionality from `inquirer`. `songshu` provides the following features:
 
--   **Security hardened** 🔒. `songshu` encrypts everything in the configuration storage by default, prompting a user for password to use to seed the encryption key.
--   **Convenient** 🌰. `songshu` automatically stores answers received by `inquirer` into encrypted `configstore`.
--   **Extra Convenient** 🆒. If you provide an array of questions to `songshu` you can choose to have them only prompt the user if the answer is not already saved in storage.
--   **Compatible**. It can be used as a drop in replacement for the extremely popular `configstore`(which it uses under the hood). lays well with others❤️. `songshu` has been trained to mimic🦜 the behavior of config store in most cases. Not thoroughly tested, but the API exposes the same functions⚙️. If you switch to `songshu`😍🐿️ , you will however need to reenter your config information🙃.
+-   **Security hardened** 🔒. `songshu` by default automatically encrypts all information it receives from the user to manage. `songshu` prompts the user for a password with which to seed the encryption key.
+-   **Convenient Storage** 🌰. `songshu` automatically stores🌰 answers it receives into encrypted `configstore`.
+-   **Extra Convenient** 🆒. You can provide an array of questions to `songshu` and have `songshu` only prompt the user if the answer is not already saved in storage.
+-   **User Friendly** 😊. `songshu` uses `inquirer` for prompts which means that the prompts look attractive, simple, and friendly.
+-   **Compatible** ✅. `songshu` plays well with others and can be used _almost_ as a drop in replacement for the extremely popular `configstore`(which it uses under the hood). `songshu` has been trained to mimic🦜 the behavior of config store, but not all. Not thoroughly tested, but the API exposes the same functions⚙️.
 
 ---
 
@@ -22,6 +22,8 @@ This is basically an encrypted wrapper around the npm packages `inquirer` and `c
 -   [Contents](#contents)
 -   [Installation](#installation)
 -   [Usage](#usage)
+-   [Issues and `configstore` Differences](#issues-and-configstore-differencs)
+-   [Cryptography](#cryptography)
 -   [Roadmap](#roadmap)
 
 ## Installation 🏗️
@@ -62,6 +64,10 @@ You can even set the mask to any arbitrary character!? Why not choose something 
     mask: '☭'
 ...
 ```
+
+## Issues and `configstore` Differences
+
+If you switch to `songshu`😍🐿️ , you will however need to reenter your config information🙃.
 
 ## Cryptography 🔒
 
