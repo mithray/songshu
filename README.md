@@ -24,7 +24,7 @@ _A usable node module for secure credential storage_
 -   [Usage](#usage-%EF%B8%8F)
 -   [Issues and `configstore` Differences](#issues-and-configstore-differencs)
 -   [Cryptography](#cryptography-)
--   [Roadmap](#roadmap-%EF%B8%8F)
+-   [Roadmap](#roadmap)
 
 ## Installation 🏗️
 
@@ -111,7 +111,7 @@ Upon receiving a key and a value to store, `songshu` does the following:
 2. Encrypts them with AES-256-XTS encryption
 3. Stores the encrypted key and value with `configstore`.
 
-## Roadmap 🛣️
+## <a name="roadmap"></a> Roadmap 🛣️
 
 -   [ ] Encryption options
 
