@@ -38,7 +38,7 @@ npm install songshu
 
 ## Usage ⌨️
 
-The API is identical to the npm package `configstore`, so you can copy their examples except with some exceptions.
+The API is identical to the npm package `configstore`, so you can copy their [examples](https://github.com/yeoman/configstore) except with [some exceptions](#issues-and-configstore-differences).
 
 ```javascript
 const Songshu = require('songshu')
