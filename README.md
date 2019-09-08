@@ -131,7 +131,7 @@ To **encrypt and store** information, `songshu` does the following:
     },
     ```
 
-    See [kdfs][], [node_algs][], [tweetnacl][], [summary of padding algorithms][padding].
+    See [Summary of Key Derivation Functions][kdfs], [Node ciphers][node_algs], [tweetnacl][], [summary of padding algorithms][padding].
 
     | option         | algorithm_name                                                                                                                                           |
     | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
