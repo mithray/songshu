@@ -146,6 +146,6 @@ To **encrypt and store** information, `songshu` does the following:
 -   [ ] Customize logging options
 
 [kdfs]: https://en.wikipedia.org/wiki/Key_derivation_function 'Key Derivation Functions'
-[node_algs]: https://nodejs.org/api/crypte.html#crypto_crypto_createcipheriv_algorithm_key_iv_options 'Node ciphers'
+[node_algs]: https://nodejs.org/api/crypto.html#crypto_crypto_createcipheriv_algorithm_key_iv_options 'Node ciphers'
 [tweetnacl]: https://github.com/dchest/tweetnacl-js 'tweetnacl-js'
 [padding]: http://www.crypto-it.net/eng/theory/padding.html 'Summary of padding types'
