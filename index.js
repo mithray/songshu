@@ -11,6 +11,7 @@ function songshu(name) {
     this.all = require('./lib/all.js')
     this.getSet = require('./lib/getSet.js')
     this.getEncryptedPropertyKey = require('./lib/getEncryptedPropertyKey.js')
+    this.prettyPrint = require('./lib/prettyPrint.js')
     /*
     this.reKey = require('./lib/reKey.js')
     this.start = require('./lib/start.js') //interactive menu based secret manager using npms `inquirer`
