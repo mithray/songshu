@@ -101,7 +101,7 @@ This section only describes the surface API differences between the two, it does
 
 ## <a name="cryptography"></a>Cryptography 🔒
 
-To derive an encryption key, `songshu` does the following:
+To **derive an encryption key**, `songshu` does the following:
 
 1. Prompts for a password from the user
 2. Asks for confirmation with a retype
@@ -109,13 +109,13 @@ To derive an encryption key, `songshu` does the following:
 4. Hashes the argon2id key with sha256 (to get the right key length for aes)
 5. Uses the argon2id hash as the input entropy creates an AES cipher
 
-Note that because the key is derived deterministically from a password, it is only a finite improvement on a password. The encryption key could potentially be brute forced with a password less than perhaps 10 characters. This brute force attack can be made significantly harder by increasing the cycles of the argon2id cipher. This means that your password will be hashed over and over again so that the computation power needed to discover your password from brute force attacks becomes increasingly difficult. The only side effect to this is that `songshu` is slightly delayed in receiving your password into the system, albeit likely only by a few seconds. We have not yet included this option yet.
+In order to avoid the need for ever storing the key on the hard drive, it is derived each time by the user typing their password and deterministically turning that password into a hash. Because the key is derived deterministically from a password, it is only a finite improvement on a password. The encryption key could potentially be brute forced with a password less than perhaps 10 characters. This brute force attack can be made significantly harder by increasing the cycles of the argon2id cipher. This means that your password will be hashed over and over again so that the computation power needed to discover your password from brute force attacks becomes increasingly difficult. The only side effect to this is that `songshu` is slightly delayed in receiving your password into the system, albeit likely only by a few seconds. We have not yet included this option yet.
 
-Upon receiving a key and a value to store, `songshu` does the following:
+To **encrypt and store** information, `songshu` does the following:
 
-1. Pads each of those keys and values with random bytes.
-2. Encrypts them with AES-256-XTS encryption
-3. Stores the encrypted key and value with `configstore`.
+1. Pads each of those keys and values with random bytes (nacl.randomBytes)
+2. Encrypts them with AES-256-XTS encryption (description derived as above)
+3. Stores the encrypted information with `configstore`
 
 ## <a name="roadmap"></a> Roadmap 🛣️
 
@@ -131,7 +131,7 @@ Upon receiving a key and a value to store, `songshu` does the following:
     },
     ```
 
-    See [kdfs][], [node_algs][], [tweetnacl][], [padding][summary of padding algorithms],
+    See [kdfs][], [node_algs][], [tweetnacl][], [summary of padding algorithms][padding].
 
     | option         | algorithm_name                                                                                                                                           |
     | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
