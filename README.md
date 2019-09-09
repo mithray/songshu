@@ -82,7 +82,7 @@ This section only describes the surface API differences between the two, it does
 
 ## <a name="cryptography"></a>Cryptography 🔒
 
-_see section [Cryptography](lib/cryptography) for details_
+_see section [Cryptography](https://github.com/mithrayls/songshu/lib/cryptography) for details_
 
 Data stored with `songshu` is encrypted by default. The key used for encryption is obtained by prompting the user for a password and stetching it into a full key. The prompt will occur every time the user attempts to do something for which decryption is required. **soon** You can save time entering your encryption key to an environment variable, this will however mean you encryption key is stored on your hardrive. Presently it only ever exists in memory.
 
@@ -117,7 +117,7 @@ Data stored with `songshu` is encrypted by default. The key used for encryption 
 
 -   [ ] Customize logging options
 
--   [ ] Support more encryption options. See [cryptography roadmap](lib/cryptography/#roadmap) for details.
+-   [ ] Support more encryption options. See [cryptography roadmap](https://github.com/mithrayls/songshu/lib/cryptography/#roadmap) for details.
 
 [kdfs]: https://en.wikipedia.org/wiki/Key_derivation_function 'Key Derivation Functions'
 [node_algs]: https://nodejs.org/api/crypto.html#crypto_crypto_createcipheriv_algorithm_key_iv_options 'Node ciphers'
