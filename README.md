@@ -70,7 +70,7 @@ You can even set the mask to any arbitrary character!? Why not choose something 
 
 This section only describes the surface API differences between the two, it does not include encryption which is defined in the section [cryptography](#cryptography-).
 
--   If you switch to `songshu`😍🐿️ , you will need to reenter your config information🙃.
+-   If you switch to `songshu`, you will need to reenter your config information😲.
 -   `configstore` has three _properties_ which in `songshu` are _methods_. This _may_ change, but it is this way for
     -   **API Consumers:** It seems more consistent if they are _methods_, as they are used like methods.
     -   **API Developers:** Because `songshu` requires a password to encrypt and decrypt, and because it aims to be modular in making its methods usable independently of the `songshu` object, it is much easier to implement _functions_ as object properties which can be run anytime, rather than properties, which are normally defined when the object is created.
