@@ -1,0 +1,46 @@
+graph TB
+subgraph Create Cipher
+    password("password") 
+    argon2id_hash("Argon2id Hash")
+    sha_hash("Sha 256 Hash")
+
+end
+subgraph Encryption
+    node_cipher("Node AES Cipher")
+    configstore("configstore")
+    storage("storage")
+end
+password_prompt -- prompt password --> password
+password -- argon2id stretching --> argon2id_hash
+argon2id_hash -- sha hash --> sha_hash
+sha_hash -- node createcipheriv --> node_cipher
+
+subgraph Prompts
+    password_prompt("Password Prompt")
+    information_prompt("Information Prompt")
+end
+
+subgraph Prepare String
+    padder("String Padder")
+end
+
+information_prompt -- prompts for information --> padder
+padder -- pads the information --> node_cipher
+node_cipher -- encrypts the information --> configstore
+configstore -- stores the information --> storage
+
+style padder fill:mediumseagreen,stroke:#ccc,stroke-width:1px;
+
+style password_prompt fill:lightcoral,stroke:#ccc,stroke-width:1px;
+style information_prompt fill:lightcoral,stroke:#ccc,stroke-width:1px;
+
+
+style password fill:darkgray,stroke:#ccc,stroke-width:1px;
+style argon2id_hash fill:darkgray,stroke:#ccc,stroke-width:1px;
+style sha_hash fill:darkgray,stroke:#ccc,stroke-width:1px;
+
+style node_cipher fill:steelblue,stroke:#ccc,stroke-width:1px;
+style configstore fill:steelblue,stroke:#ccc,stroke-width:1px;
+style storage fill:steelblue,stroke:#ccc,stroke-width:1px;
+
+style Prompts fill:steelblue,stroke:#ccc,stroke-width:1px;
