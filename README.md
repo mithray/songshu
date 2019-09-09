@@ -89,53 +89,35 @@ Data stored with `songshu` is encrypted by default. The key used for encryption 
 ## <a name="roadmap"></a> Roadmap 🛣️
 
 -   [ ] Basic functionality
-    -   [x] set(key, value)
-    -   [ ] set(Object)
-    -   [x] get(key)
-    -   [x] has(key)
-    -   [x] delete(key)
+
+    -   [x] set( key, value )
+    -   [ ] set( Object )
+    -   [x] get( key )
+    -   [x] has( key )
+    -   [x] delete( key )
     -   [x] clear()
     -   [x] size()
     -   [x] path()
     -   [x] all()
+
 -   [ ] Songshu extensions
+
     -   [x] getSet(key)
-    -   [x] getSet([key1, key2, ...])
-    -   [x] get([key1, key2, ...])
-    -   [ ] setPrompt(key)
+    -   [x] getSet( [ key1, key2, ... ] )
+    -   [x] get( [ key1, key2, ... ] )
+    -   [ ] setPrompt( key )
     -   [ ] reKey()
     -   [ ] exportEncryptionKey()
+
 -   [ ] Three interfaces:
+
     -   [x] Node Module
     -   [ ] Non-Interactive CLI with `commander`
     -   [ ] Interactive CLI with `inquirer`
+
 -   [ ] Customize logging options
+
 -   [ ] Support more encryption options, especially the ones supported by Nacl, Node Crypto(uses OpenSSL), OpenPGP
-
-    ```javascript
-    // Default
-    encryption: {
-        enabled: true,
-        alg_stretching: {
-            alg_name: 'argon2id',
-            memory_cost: 2**18
-        },
-        alg_encryption: {
-            alg_name: 'aes-256-xts'
-        },
-        alg_padding: {
-            alg_name: 'nacl'
-        }
-    },
-    ```
-
-    See [Summary of Key Derivation Functions][kdfs], [Node ciphers][node_algs], [tweetnacl][], [summary of padding algorithms][padding].
-
-    | option         | algorithm_name                                                                                                                                           |
-    | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | alg_stretching | <ul><li>argon2id</li><li>pbkdf2</li><li>scrypt</li><li>argon2i</li><li>argon2d</li><li>bcrypt</li></ul>                                                  |
-    | alg_encryption | <ul><li>aes-256-xts</li><li>nacl</li><li>OpenPGP</li><li>various OpenSSL/node `crypto`</li></ul>                                                         |
-    | alg_padding    | <ul><li>nacl</li><li>node</li><li>zero</li><li>bit</li><li>tbc</li><li>pkcs5</li><li>pkcs7</li> <li>iso7816</li> <li>iso10126</li><li>ansix923</li></ul> |
 
 [kdfs]: https://en.wikipedia.org/wiki/Key_derivation_function 'Key Derivation Functions'
 [node_algs]: https://nodejs.org/api/crypto.html#crypto_crypto_createcipheriv_algorithm_key_iv_options 'Node ciphers'
@@ -152,14 +134,18 @@ options = {
     mask: '*',
     globalConfigPath: false,
     configPath: `${CONFIG}/configstore/${PACKAGE_NAME}.json`
+    encryption: {
+        enabled: true,
+        alg_stretching: {
+            alg_name: 'argon2id',
+            memory_cost: 2**18
+        },
+        alg_encryption: {
+            alg_name: 'aes-256-xts'
+        },
+        alg_padding: {
+            alg_name: 'nacl'
+        }
+    }
 }
-songshu = new Songshu()
-```
-
-You can even set the mask to any arbitrary character!? Why not choose something fun ?!!
-
-```javascript
-...
-    mask: '☭'
-...
 ```
