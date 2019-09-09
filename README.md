@@ -119,6 +119,22 @@ To **encrypt and store** information, `songshu` does the following:
 
 ## <a name="roadmap"></a> Roadmap 🛣️
 
+-   [ ] Basic functionality
+    -   [x] set(key, value)
+    -   [ ] set(Object)
+    -   [x] get(key)
+    -   [x] has(key)
+    -   [x] delete(key)
+    -   [x] clear()
+    -   [x] size()
+    -   [x] path()
+    -   [x] all()
+-   [ ] Songshu extensions
+    -   [x] getSet(key)
+    -   [x] getSet([key1, key2, ...])
+    -   [x] get([key1, key2, ...])
+    -   [ ] setPrompt(key)
+    -   [ ] reKey()
 -   [ ] Support more encryption options, especially the ones supported by Nacl, Node Crypto(uses OpenSSL), OpenPGP
 
     ```javascript
