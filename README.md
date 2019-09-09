@@ -117,7 +117,7 @@ Data stored with `songshu` is encrypted by default. The key used for encryption 
 
 -   [ ] Customize logging options
 
--   [ ] Support more encryption options, especially the ones supported by Nacl, Node Crypto(uses OpenSSL), OpenPGP
+-   [ ] Support more encryption options. See [cryptography roadmap](lib/cryptography/#roadmap) for details.
 
 [kdfs]: https://en.wikipedia.org/wiki/Key_derivation_function 'Key Derivation Functions'
 [node_algs]: https://nodejs.org/api/crypto.html#crypto_crypto_createcipheriv_algorithm_key_iv_options 'Node ciphers'
