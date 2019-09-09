@@ -101,9 +101,9 @@ This section only describes the surface API differences between the two, it does
 
 ## <a name="cryptography"></a>Cryptography 🔒
 
-_See section [Cryptography](lib/cryptography)_
+_see section [Cryptography](lib/cryptography) for details_
 
-Data is encrypted by default, the key used for encryption is obtained by prompting the user for a password and stetching it into a full key.
+Data stored with `songshu` is encrypted by default. The key used for encryption is obtained by prompting the user for a password and stetching it into a full key. The prompt will occur every time the user attempts to do something for which decryption is required. **soon** You can save time entering your encryption key to an environment variable, this will however mean you encryption key is stored on your hardrive. Presently it only ever exists in memory.
 
 ## <a name="roadmap"></a> Roadmap 🛣️
 
@@ -123,6 +123,12 @@ Data is encrypted by default, the key used for encryption is obtained by prompti
     -   [x] get([key1, key2, ...])
     -   [ ] setPrompt(key)
     -   [ ] reKey()
+    -   [ ] exportEncryptionKey()
+-   [ ] Three interfaces:
+    -   [x] Node Module
+    -   [ ] Non-Interactive CLI with `commander`
+    -   [ ] Interactive CLI with `inquirer`
+-   [ ] Customize logging options
 -   [ ] Support more encryption options, especially the ones supported by Nacl, Node Crypto(uses OpenSSL), OpenPGP
 
     ```javascript
@@ -147,14 +153,8 @@ Data is encrypted by default, the key used for encryption is obtained by prompti
     | option         | algorithm_name                                                                                                                                           |
     | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
     | alg_stretching | <ul><li>argon2id</li><li>pbkdf2</li><li>scrypt</li><li>argon2i</li><li>argon2d</li><li>bcrypt</li></ul>                                                  |
-    | alg_encryption | <ul><li>aes-256-xts</li><li>nacl</li><li>OpenPGP</li><li>all node crypto algos</li></ul>                                                                 |
+    | alg_encryption | <ul><li>aes-256-xts</li><li>nacl</li><li>OpenPGP</li><li>various OpenSSL/node `crypto`</li></ul>                                                         |
     | alg_padding    | <ul><li>nacl</li><li>node</li><li>zero</li><li>bit</li><li>tbc</li><li>pkcs5</li><li>pkcs7</li> <li>iso7816</li> <li>iso10126</li><li>ansix923</li></ul> |
-
--   [ ] Three interfaces:
-    -   [ ] Node Module
-    -   [ ] Non Interactive CLI with `commander`
-    -   [ ] Interactive CLI with `inquirer`
--   [ ] Customize logging options
 
 [kdfs]: https://en.wikipedia.org/wiki/Key_derivation_function 'Key Derivation Functions'
 [node_algs]: https://nodejs.org/api/crypto.html#crypto_crypto_createcipheriv_algorithm_key_iv_options 'Node ciphers'
