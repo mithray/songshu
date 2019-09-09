@@ -2,7 +2,7 @@
 
 _A usable node module for secure credential storage_
 
-![Songshu](https://raw.githubusercontent.com/mithrayls/songshu/master/squirrel_small.png)
+![Songshu](https://raw.githubusercontent.com/mithrayls/songshu/master/songshu.png)
 
 ## <a name="introduction"></a>Introduction 🔰
 

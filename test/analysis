@@ -1,0 +1,37 @@
+Tue Sep 10 01:23:10 NZST 2019
+---------- Result ------------
+
+            Physical :  507
+              Source :  408
+             Comment :  45
+ Single-line comment :  12
+       Block comment :  33
+               Mixed :  0
+ Empty block comment :  0
+               Empty :  54
+               To Do :  0
+
+Number of files read :  22
+
+----------------------------
+
+----------------------------
+
+Tue Sep 10 01:54:27 NZST 2019
+
+---------- Result ------------
+
+            Physical :  483
+              Source :  397
+             Comment :  29
+ Single-line comment :  10
+       Block comment :  19
+               Mixed :  0
+ Empty block comment :  0
+               Empty :  57
+               To Do :  0
+
+Number of files read :  22
+
+----------------------------
+

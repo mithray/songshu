@@ -12,11 +12,9 @@
     "license": "MIT",
     "dependencies": {
         "@mithray/md-terminal": "0.0.1",
-        "ansi-colors": "^4.1.1",
         "argon2": "^0.24.1",
         "configstore": "^5.0.0",
         "inquirer": "^7.0.0",
-        "node-emoji": "^1.10.0",
         "tweetnacl": "^1.0.1"
     }
 }

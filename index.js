@@ -4,24 +4,24 @@ const helpers = require('./lib/helpers/helpers.js')
 
 function songshu(name) {
     this.name = name
-    this.encryptionKey = process.env.SONGSHU_ENCRYPTION_KEY
 
-    this.set = basic.set
     this.get = basic.get
+    this.all = basic.all
+    this.set = basic.set
     this.has = basic.has
     this.delete = basic.delete
     this.clear = basic.clear
     this.size = basic.size
     this.path = basic.path
-    this.all = basic.all
-
     this.getSet = basic.getSet
+    /*
+
     this.getEncryptedPropertyKey = helpers.getEncryptedPropertyKey
 
     this.prettyPrint = interaction.prettyPrint
-    /*
     this.reKey = cryptography.reKey
     this.start = interaction.start
+    this.encryptionKey = process.env.SONGSHU_ENCRYPTION_KEY
     */
 }
 
