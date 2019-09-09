@@ -1,6 +1,6 @@
 {
     "name": "songshu",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "",
     "main": "index.js",
     "bin": "./bin/songshu.js",
@@ -16,7 +16,6 @@
         "argon2": "^0.24.1",
         "configstore": "^5.0.0",
         "inquirer": "^7.0.0",
-        "mermaid.cli": "^0.5.1",
         "node-emoji": "^1.10.0",
         "tweetnacl": "^1.0.1"
     }

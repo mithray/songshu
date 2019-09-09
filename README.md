@@ -12,7 +12,7 @@ _A usable node module for secure credential storage_
 -   **Convenient Storage** 🌰. `songshu` automatically stores🌰 answers it receives into encrypted `configstore`.
 -   **Extra Convenient** 🆒. You can provide an array of questions to `songshu` and have `songshu` only prompt the user if the answer is not already saved in storage.
 -   **User Friendly** 🙂. `songshu` uses `inquirer` for prompts which means that the prompts look attractive, simple, and friendly.
--   **Compatible** ✅. `songshu` plays well with others and can be used _almost_ as a drop in replacement for the extremely popular `configstore`(which it uses under the hood). See the section [issues and differences](#issues-and-configstore-differences). `songshu` has been trained to mimic🦜 the behavior of config store, but not all. Not thoroughly tested, but the API exposes the same functions⚙️.
+-   **Compatible** ✅. `songshu` plays well with others and can be used _almost_ as a drop in replacement for the extremely popular `configstore`(which it uses under the hood). See the section [issues and differences](#issues-and-configstore-differences). `songshu` has been trained to mimic the behavior of config store, but not all. Not thoroughly tested, but the API exposes the same functions⚙️.
 
 ---
 
@@ -44,21 +44,26 @@ The API is nearly identical to the npm package `configstore`, so you can copy th
 ```javascript
 const Songshu = require('songshu')
 const packageJson = require('./package.json')
-songshu = new Songshu(packageJson.name)
+const songshu = new Songshu(packageJson.name)
 ```
 
 ## Issues and `configstore` Differences
 
 This section only describes the surface API differences between the two, it does not include encryption which is defined in the section [cryptography](#cryptography-).
 
--   If you switch to `songshu`, you will need to reenter your config information😲.
--   `configstore` has three _properties_ which in `songshu` are _methods_. This _may_ change, but it is this way for
-    -   **API Consumers:** It seems more consistent if they are _methods_, as they are used like methods.
-    -   **API Developers:** Because `songshu` requires a password to encrypt and decrypt, and because it aims to be modular in making its methods usable independently of the `songshu` object, it is much easier to implement _functions_ as object properties which can be run anytime, rather than properties, which are normally defined when the object is created.
+-   `configstore` has three _properties_ which in `songshu` are _methods_: `.size`, `.path`, and `.all`. That means you should access them like this:
+
+```javascript
+let all = songshu.all()
+let all = songshu.path()
+let all = songshu.size()
+```
+
+This _may_ change, if some people would prefer it this way.
 
 ## Extra Features
 
--   **`getSet`**: `songshu`'s `getSet` function is similar to `configstore`'s `set` function, except
+-   **`getSet`**: `songshu`'s `getSet` function is similar to `configstore`'s `set` function, except:
     -   `getSet` only accepts a key, it does not accept a value.
     -   If the key already exists in storage, `getSet` will not redefine it.
     -   If the key does not exist in storage, `getSet` will prompt the user to enter it with inquirer.
