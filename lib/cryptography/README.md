@@ -1,8 +1,8 @@
 # <a name="cryptography"></a>Cryptography 🔒
 
-## Derive Encryption Key
-
 ![Songshu](https://raw.githubusercontent.com/mithrayls/songshu/master/lib/cryptography/diagram.png)
+
+## Derive Encryption Key
 
 To **derive an encryption key**, `songshu` does the following:
 
