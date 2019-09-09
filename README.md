@@ -39,31 +39,12 @@ npm install songshu
 
 ## <a name="usage"></a>Usage ⌨️
 
-The API is identical to the npm package `configstore`, so you can copy their [examples](https://github.com/yeoman/configstore) except with [some exceptions](#issues-and-configstore-differences).
+The API is nearly identical to the npm package `configstore`, so you can copy their [examples](https://github.com/yeoman/configstore) except with [some exceptions](#issues-and-configstore-differences).
 
 ```javascript
 const Songshu = require('songshu')
 const packageJson = require('./package.json')
 songshu = new Songshu(packageJson.name)
-```
-
-You can pass an object to the `songshu` constructor for additional configuration.
-
-```javascript
-options = {
-    mask: '*',
-    globalConfigPath: false,
-    configPath: `${CONFIG}/configstore/${PACKAGE_NAME}.json`
-}
-songshu = new Songshu()
-```
-
-You can even set the mask to any arbitrary character!? Why not choose something with character? You can even choose something fun like the hammer and sickle ☭ if you're partial to mass murder🎉😍!!
-
-```javascript
-...
-    mask: '☭'
-...
 ```
 
 ## Issues and `configstore` Differences
@@ -160,3 +141,25 @@ Data stored with `songshu` is encrypted by default. The key used for encryption 
 [node_algs]: https://nodejs.org/api/crypto.html#crypto_crypto_createcipheriv_algorithm_key_iv_options 'Node ciphers'
 [tweetnacl]: https://github.com/dchest/tweetnacl-js 'tweetnacl-js'
 [padding]: http://www.crypto-it.net/eng/theory/padding.html 'Summary of padding types'
+
+## Passing Options
+
+**Not yet implemented**
+You can pass an object to the `songshu` constructor for additional configuration.
+
+```javascript
+options = {
+    mask: '*',
+    globalConfigPath: false,
+    configPath: `${CONFIG}/configstore/${PACKAGE_NAME}.json`
+}
+songshu = new Songshu()
+```
+
+You can even set the mask to any arbitrary character!? Why not choose something fun ?!!
+
+```javascript
+...
+    mask: '☭'
+...
+```
