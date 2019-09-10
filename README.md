@@ -6,7 +6,7 @@ _A usable node module for secure credential storage_
 
 ## <a name="introduction"></a>Introduction 🔰
 
-`songshu` is a friendly squirrel🐿️ that can act almost as a drop in replacement for `configstore`(it has minor API differences) but provides extra methods and stores data as encrypted by default. For the most part, it is an encrypted wrapper around the npm packages `configstore` but for helpful prompting functionality from `inquirer`. `songshu` provides the following features:
+`songshu` is a friendly squirrel🐿️ that can act almost as a drop in replacement for `configstore`(it has minor API differences) but provides extra methods and stores data as encrypted by default. For the most part, it is an encrypted wrapper around the npm package `configstore` but also contains helpful prompting functionality from `inquirer`. `songshu` provides the following features:
 
 -   **Security hardened** 🔒. `songshu` by default automatically encrypts all information it receives from the user to manage. `songshu` prompts the user for a password with which to seed the encryption key.
 -   **Convenient Storage** 🌰. `songshu` automatically stores🌰 answers it receives into encrypted `configstore`.
@@ -110,6 +110,8 @@ Data stored with `songshu` is encrypted by default. The key used for encryption 
     -   [x] getSet(key)
     -   [x] getSet( [ key1, key2, ... ] )
     -   [x] get( [ key1, key2, ... ] )
+    -   [x] hashTest()
+    -   [ ] stretchPassword(password)
     -   [ ] setPrompt( key )
     -   [ ] reKey()
     -   [ ] exportEncryptionKey()
