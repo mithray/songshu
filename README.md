@@ -113,6 +113,8 @@ Data stored with `songshu` is encrypted by default. The key used for encryption 
     -   [ ] setPrompt( key )
     -   [ ] reKey()
     -   [ ] exportEncryptionKey()
+    -   [ ] exportEncryptedData()
+    -   [ ] exportDecryptedData()
 
 -   [ ] Three interfaces:
 
@@ -132,6 +134,7 @@ Data stored with `songshu` is encrypted by default. The key used for encryption 
 ## Passing Options
 
 **Not yet implemented**
+
 You can pass an object to the `songshu` constructor for additional configuration.
 
 ```javascript

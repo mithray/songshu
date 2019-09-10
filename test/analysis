@@ -35,3 +35,21 @@ Number of files read :  22
 
 ----------------------------
 
+Tue Sep 10 02:09:43 NZST 2019
+
+---------- Result ------------
+
+            Physical :  479
+              Source :  396
+             Comment :  26
+ Single-line comment :  7
+       Block comment :  19
+               Mixed :  0
+ Empty block comment :  0
+               Empty :  57
+               To Do :  0
+
+Number of files read :  22
+
+----------------------------
+
