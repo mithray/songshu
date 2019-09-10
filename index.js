@@ -1,6 +1,7 @@
 const basic = require('./lib/basic/basic.js')
 const interaction = require('./lib/interaction/interaction.js')
 const helpers = require('./lib/helpers/helpers.js')
+const cryptography = require('./lib/cryptography/cryptography.js')
 
 function songshu(name) {
     this.name = name
@@ -14,6 +15,7 @@ function songshu(name) {
     this.size = basic.size
     this.path = basic.path
     this.getSet = basic.getSet
+    this.hashTest = cryptography.hashTest
     /*
 
     this.getEncryptedPropertyKey = helpers.getEncryptedPropertyKey
