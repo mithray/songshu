@@ -11,13 +11,11 @@
     "author": "mithrayls <mithray@protonmail.com> (https://mithrayls.github.io/)",
     "license": "MIT",
     "dependencies": {
-        "ansi-colors": "^4.1.1",
         "argon2": "^0.24.1",
         "configstore": "^5.0.0",
+        "cryptsec": "0.0.1",
         "inquirer": "^7.0.0",
         "log-update": "^3.3.0",
-        "si-tools": "^1.3.2",
-        "subsup": "^1.0.0",
         "tweetnacl": "^1.0.1"
     }
 }

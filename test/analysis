@@ -53,3 +53,57 @@ Number of files read :  22
 
 ----------------------------
 
+Wed Sep 11 10:45:18 NZST 2019
+
+---------- Result ------------
+
+            Physical :  422
+              Source :  365
+             Comment :  6
+ Single-line comment :  4
+       Block comment :  2
+               Mixed :  0
+ Empty block comment :  0
+               Empty :  51
+               To Do :  0
+
+Number of files read :  19
+
+----------------------------
+
+Wed Sep 11 13:44:16 NZST 2019
+
+---------- Result ------------
+
+            Physical :  393
+              Source :  335
+             Comment :  6
+ Single-line comment :  4
+       Block comment :  2
+               Mixed :  0
+ Empty block comment :  0
+               Empty :  52
+               To Do :  0
+
+Number of files read :  19
+
+----------------------------
+
+Wed Sep 11 13:45:11 NZST 2019
+
+---------- Result ------------
+
+            Physical :  377
+              Source :  322
+             Comment :  6
+ Single-line comment :  4
+       Block comment :  2
+               Mixed :  0
+ Empty block comment :  0
+               Empty :  49
+               To Do :  0
+
+Number of files read :  18
+
+----------------------------
+
