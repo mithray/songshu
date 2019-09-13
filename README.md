@@ -55,8 +55,8 @@ This section only describes the surface API differences between the two, it does
 
 ```javascript
 let all = songshu.all()
-let all = songshu.path()
-let all = songshu.size()
+let path = songshu.path()
+let size = songshu.size()
 ```
 
 This _may_ change, if some people would prefer it this way.
