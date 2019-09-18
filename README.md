@@ -107,12 +107,16 @@ Data stored with `songshu` is encrypted by default. The key used for encryption 
 
 -   [ ] Songshu extensions
 
-    -   [x] getSet(key)
-    -   [x] getSet( [ key1, key2, ... ] )
+    -   [x] getSet(key, options{})
+    -   [x] getSet( [ key1, key2, ... ], options{} )
+    -   [ ] getSet( [ key1, key2, ... ], [ options1{}, options2{}, ... ])
+    -   [x] getSetDefault( key, options )
+    -   [x] getSetDefault( [key, key2, ...], options{})
+    -   [ ] getSetDefault( [key, key2, ...], [options1{}, options2{}, ...])
     -   [x] get( [ key1, key2, ... ] )
     -   [x] hashTest()
     -   [ ] stretchPassword(password)
-    -   [ ] setPrompt( key )
+    -   [ ] setPrompt( key ) <!-- How is this different from .set?-->
     -   [ ] reKey()
     -   [ ] exportEncryptionKey()
     -   [ ] exportEncryptedData()
@@ -159,3 +163,7 @@ options = {
     }
 }
 ```
+
+`set`, `getSet`, `getSetDefault` can take as arguments an object, an array of objects, a value, or an array of values
+
+can
