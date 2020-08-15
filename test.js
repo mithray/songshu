@@ -13,8 +13,8 @@ Songshu.registerStorage().then(storage => {
 })
 */
 
-songshu.getSet(['a', 'ba'], {
-    validate: 'Joi.string().min(2)'
+songshu.get(['a', 'ba'], {
+//    validate: 'Joi.string().min(2)'
 })
 /*
 songshu.stretchPassword('abc').then(res => {

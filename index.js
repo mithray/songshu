@@ -1,7 +1,7 @@
 const basic = require('./lib/basic/basic.js')
 const interaction = require('./lib/interaction/interaction.js')
 const helpers = require('./lib/helpers/helpers.js')
-const cryptography = require('../cryptsec')
+const cryptography = require('cryptsec')
 const readPkgUp = require('read-pkg-up')
 
 function Songshu(name) {
